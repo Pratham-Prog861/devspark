@@ -127,3 +127,40 @@
     @apply font-sans;
   }
 }
+
+@layer components {
+  .code-keyword {
+    color: #ff79c6;
+    font-style: italic;
+  }
+
+  .code-typekw {
+    color: #ff79c6;
+    font-style: italic;
+  }
+
+  .code-string {
+    color: #50fa7b;
+  }
+
+  .code-number {
+    color: #bd93f9;
+  }
+
+  .code-comment {
+    color: #6272a4;
+    font-style: italic;
+  }
+
+  .code-type {
+    color: #ffb86c;
+  }
+
+  .code-constant {
+    color: #f1fa8c;
+  }
+
+  .code-operator {
+    color: #f8fafc;
+  }
+}

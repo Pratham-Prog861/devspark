@@ -38,6 +38,10 @@ Inside "Complete GitHub README.md", provide a full README with these sections:
 - Future Improvements
 - MIT License
 
-For the README section, render it as a markdown document that could be copied directly into a README.md file.`
-}
+Critical README rules:
+- DO NOT wrap the README in triple backticks.
+- Output raw README markdown content directly.
+- Include a complete MIT License section with the standard permission notice text.
 
+For the README section, render it as a markdown document that can be copied directly into a README.md file.`
+}

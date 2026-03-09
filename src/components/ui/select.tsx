@@ -27,25 +27,30 @@ function Select({
   className,
 }: SelectProps) {
   return (
-    <select
-      id={id}
-      value={value}
-      disabled={disabled}
-      onChange={(event) => onValueChange(event.target.value)}
-      className={cn(
-        "bg-background focus-visible:border-ring focus-visible:ring-ring/40 h-10 w-full rounded-xl border border-input px-3 text-sm outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-60",
-        className
-      )}
-    >
-      {placeholder ? <option value="">{placeholder}</option> : null}
-      {options.map((option) => (
-        <option key={option.value} value={option.value}>
-          {option.label}
-        </option>
-      ))}
-    </select>
+    <div className="relative">
+      <select
+        id={id}
+        value={value}
+        disabled={disabled}
+        onChange={(event) => onValueChange(event.target.value)}
+        className={cn(
+          "bg-background focus-visible:border-ring focus-visible:ring-ring/30 h-10 w-full appearance-none rounded-xl border border-input px-3 pr-9 text-sm outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-60",
+          className
+        )}
+      >
+        {placeholder ? <option value="">{placeholder}</option> : null}
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+
+      <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400">
+        v
+      </span>
+    </div>
   )
 }
 
 export { Select }
-
